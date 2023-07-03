@@ -52,6 +52,4 @@
         "globalSetup": "jest-preset-angular/global-setup"
     }
 
-
-
 }
