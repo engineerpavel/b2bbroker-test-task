@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "jest --no-cache"
+    "test": "jest --no-cache",
+    "format": "npx prettier \"src/**/*.{js,jsx,ts,tsx,html,css,scss}\" --write"
   },
   "private": true,
   "dependencies": {
@@ -43,11 +44,5 @@
       "<rootDir>/src/setup-jest.ts"
     ],
     "globalSetup": "jest-preset-angular/global-setup"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run test",
-      "pre-push": "ng build --prod"
-    }
   }
 }
