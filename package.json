@@ -2,9 +2,19 @@
     "name": "b2bbroker-test-task",
     "version": "0.0.0",
     "scripts": {
-        "prepare": "husky install .config/husky"
+        "ng": "ng",
+        "start": "ng serve",
+        "build": "ng build",
+        "watch": "ng build --watch --configuration development",
+        "test": "jest --no-cache",
+        "format": "npx prettier \"src/**/*.{js,jsx,ts,tsx,html,css,scss}\" --write"
     },
     "private": true,
+    "husky": {
+        "hooks": {
+            "pre-commit": "npx pretty-quick --staged"
+        }
+    },
     "dependencies": {
         "@angular/animations": "^15.2.0",
         "@angular/common": "^15.2.0",
@@ -40,10 +50,8 @@
             "<rootDir>/src/setup-jest.ts"
         ],
         "globalSetup": "jest-preset-angular/global-setup"
-    },
+    }
 
-        "hooks": {
-            "pre-commit": "npx pretty-quick --staged"
-        }
+
 
 }
