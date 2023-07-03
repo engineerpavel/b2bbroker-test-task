@@ -41,9 +41,9 @@
         ],
         "globalSetup": "jest-preset-angular/global-setup"
     },
-    "husky": {
+
         "hooks": {
             "pre-commit": "npx pretty-quick --staged"
         }
-    }
+
 }
