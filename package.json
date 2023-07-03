@@ -12,7 +12,7 @@
     "private": true,
     "husky": {
         "hooks": {
-            "pre-commit": "npx pretty-quick --staged"
+            "pre-commit": "npm run build"
         }
     },
     "dependencies": {
